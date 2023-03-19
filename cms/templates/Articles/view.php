@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\Article $article
  */
 ?>
+<h1>This template can be modified next time.</h1>
 <div class="row">
     <aside class="column">
         <div class="side-nav">
