@@ -42,6 +42,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
         <div class="top-nav-links">
             <?= $this->Html->link(__('Articles'), ['controller' => 'Articles', 'action' => 'index'] )?>
+            <?= $this->Html->link(__('Users'), ['controller' => 'Users', 'action' => 'index'] )?>
         </div>
     </nav>
     <main class="main">
