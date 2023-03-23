@@ -54,11 +54,12 @@ class AppController extends Controller
         //$this->loadComponent('FormProtection');
     }
 
-    public function beforeFilter(\Cake\Event\EventInterface $event)
-    {
-        parent::beforeFilter($event);
-        // for all controllers in our application, make index and view
-        // actions public, skipping the authentication check.
-        $this->Authentication->addUnauthenticatedActions(['index', 'view']);
-    }
+    // 會關閉所有頁面 index 和 view 的驗證
+    // public function beforeFilter(\Cake\Event\EventInterface $event)
+    // {
+    //     parent::beforeFilter($event);
+    //     // for all controllers in our application, make index and view
+    //     // actions public, skipping the authentication check.
+    //     $this->Authentication->addUnauthenticatedActions(['index', 'view']);
+    // }
 }

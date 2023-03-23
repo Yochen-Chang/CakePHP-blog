@@ -41,8 +41,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <a href="<?= $this->Url->build('/') ?>"><span>Homepage</span></a>
         </div>
         <div class="top-nav-links">
-            <?= $this->Html->link(__('Articles'), ['controller' => 'Articles', 'action' => 'index'] )?>
-            <?= $this->Html->link(__('Users'), ['controller' => 'Users', 'action' => 'index'] )?>
+            <?php
+            if(isset($_SESSION['Auth'])) {
+                // user is logged in, show logout..user menu etc
+                echo $this->Html->link(__('Articles'), ['controller' => 'Articles', 'action' => 'index'] );
+                echo $this->Html->link(__('Users'), ['controller' => 'Users', 'action' => 'index'] ); 
+                echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout'));
+            } else {
+                // the user is not logged in
+                echo $this->Html->link('Login', array('controller' => 'users', 'action' => 'login')); 
+            }
+        ?>
         </div>
     </nav>
     <main class="main">
