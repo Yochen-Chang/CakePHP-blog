@@ -1,0 +1,54 @@
+msgid "Users"
+msgstr "使用者"
+
+msgid "New User"
+msgstr "建立使用者"
+
+msgid "Actions"
+msgstr "方法"
+
+msgid "Homepage"
+msgstr "首頁"
+
+msgid "Articles"
+msgstr "文章"
+
+msgid "Logout"
+msgstr "登出"
+
+msgid "Login"
+msgstr "登入"
+
+msgid "Modified"
+msgstr "修改"
+
+msgid "Created"
+msgstr "建立"
+
+msgid "Role"
+msgstr "角色"
+
+msgid "Email"
+msgstr "信箱"
+
+msgid "Id"
+msgstr "編號"
+
+msgid "View"
+msgstr "查看"
+
+msgid "Edit"
+msgstr "編輯"
+
+msgid "Delete"
+msgstr "刪除"
+
+msgid "next"
+msgstr "下一頁"
+
+msgid "previous"
+msgstr "上一頁"
+
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr "第{{page}}頁，共{{pages}}頁。顯示{{current}}項，共{{count}}項。"
+

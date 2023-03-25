@@ -38,7 +38,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Homepage</span></a>
+            <a href="<?= $this->Url->build('/') ?>"><span><?=__('Homepage')?></span></a>
         </div>
         <div class="top-nav-links">
             <?php
@@ -54,6 +54,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         ?>
         </div>
     </nav>
+    
     <main class="main">
         <div class="container">
             <?= $this->Flash->render() ?>
