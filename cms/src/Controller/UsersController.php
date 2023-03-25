@@ -56,6 +56,11 @@ class UsersController extends AppController
      */
     public function index()
     {
+        $user_role = $this->Authentication->getIdentity()->get('role');
+        if ('admin' !== $user_role){
+            return $this->redirect(['controller' => 'Pages', 'action' => 'index']);
+        }
+
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
@@ -70,6 +75,10 @@ class UsersController extends AppController
      */
     public function view($id = null)
     {
+        $user_role = $this->Authentication->getIdentity()->get('role');
+        if ('admin' !== $user_role){
+            return $this->redirect(['controller' => 'Pages', 'action' => 'index']);
+        }
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
@@ -106,6 +115,10 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
+        $user_role = $this->Authentication->getIdentity()->get('role');
+        if ('admin' !== $user_role){
+            return $this->redirect(['controller' => 'Pages', 'action' => 'index']);
+        }
         $user = $this->Users->get($id, [
             'contain' => [],
         ]);
@@ -130,6 +143,10 @@ class UsersController extends AppController
      */
     public function delete($id = null)
     {
+        $user_role = $this->Authentication->getIdentity()->get('role');
+        if ('admin' !== $user_role){
+            return $this->redirect(['controller' => 'Pages', 'action' => 'index']);
+        }
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
         if ($this->Users->delete($user)) {
